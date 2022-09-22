@@ -1,0 +1,46 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    <h1>Here I am</h1>
+    <form action = "http://localhost:5000/form" method="POST">
+        <div class="newColumn">
+            <input name="sen1[]">
+            <input name="sen2[]">
+            <input name="sen3[]">
+            <input name="sen4[]">
+            <input name="sen5[]">
+            <input name="sen6[]">
+            <input name="sen7[]">
+            <input name="sen8[]">
+            <input name="sen9[]">
+            <input name="sen10[]">
+            <input name="sen11[]">
+            <input name="sen12[]">
+        </div>
+        <input type="submit" value="Submit">
+    </form>
+
+    <button onclick="addRows()">Add New Column </button>
+
+</body>
+</html>
+<script>
+
+    function abc(a, b) {
+
+        return a * b;
+    }
+
+    function addRows() {
+        s = document.getElementsByClassName("newColumn");
+        obj = document.createElement("div");
+        obj.innerHTML = '<input name="sen1[]"><input name = "sen2[]"><input name="sen3[]"><input name="sen4[]"><input name="sen5[]"><input name="sen6[]"><input name="sen7[]"><input name="sen8[]"><input name="sen9[]"><input name="sen10[]"><input name="sen11[]"><input name="sen12[]">';
+        s[0].appendChild(obj)
+    }
+
+</script>
